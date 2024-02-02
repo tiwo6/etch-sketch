@@ -4,11 +4,34 @@ body {
     align-items: center;
 }
 
-.container {
+.body {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    
+}
+
+.canvas{
     display: flex;
     flex-wrap: wrap;
     width: 400px;
     height: 400px;
+}
+
+
+
+.menu button{
+    width: 100px;
+    height: 70px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 18px;
 }
 
 .grid{
@@ -17,10 +40,3 @@ body {
     border-width: 1px;
 }
 
-.sizeSelector {
-    width: 150px;
-    height: 75px;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px;
-}
