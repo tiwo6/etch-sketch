@@ -17,26 +17,23 @@ sizeSelector.addEventListener("click", function() {
 })
 
 container.addEventListener("mouseover", function(e) {
+    console.log(e.target.value)
     if (e.target.value == "grid") {
         e.target.style.backgroundColor = "red";
     };
 }) 
  
 function createGrid(gridSize) {
-    for (let i = 0; i < gridSize; i++) {
-        const newColumn = document.createElement("div");
-        newColumn.classList = "grid", "column";
-        newColumn.value = "grid";
-        container.appendChild(newColumn)
-        for (let j = 0; j < gridSize; j++) {
-            const newRow = document.createElement("div");
-            newRow.classList = "grid", "row";
-            newRow.value = "grid";
-            newColumn.appendChild(newRow)
-        }
+    for (let i = 0; i < gridSize*gridSize; i++) {
+        const newBox = document.createElement("div");
+        newBox.classList = "grid";
+        newBox.value = "grid";
+        let size = 400 / gridSize;
+        newBox.style.height = `${size}px`;
+        newBox.style.width = `${size}px`;
+        newBox.style.boxSizing ="border-box";
+        container.appendChild(newBox)
     }
 }
-
-
 
 createGrid(gridSize);
