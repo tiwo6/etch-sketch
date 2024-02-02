@@ -1,22 +1,27 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .container {
     display: flex;
-    background-color: black;
-    color: white;
     flex-wrap: wrap;
     width: max-content;
     height: max-content;
 }
 
-.gridColumn, .gridRow {
-    color: yellow;
+.grid{
     width: 20px;
     height: 20px;
-    background-color: white;
     border-style: solid;
     border-color: black;
+}
+
+.sizeSelector {
+    width: 150px;
+    height: 75px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
 }
